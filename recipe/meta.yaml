@@ -1,5 +1,5 @@
 {% set name = "angle-grinder" %}
-{% set version = "0.19.2" %}
+{% set version = "0.19.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/rcoh/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3a5637bbd3ef3fc2f8164a1af90b8894f79c1b2adb89a874f1f3c5a56006e18b
+  sha256: 13ae3912dcc34c2648d8ef57fe8d976cb978c70e6976ead079ea5d7609532172
 
 build:
   number: 0
@@ -17,6 +17,7 @@ requirements:
   build:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cargo-bundle-licenses
     - make
 
