@@ -20,6 +20,8 @@ requirements:
     - ${{ stdlib("c") }}
     - cargo-bundle-licenses
     - make
+  host:
+    - jemalloc
 
 tests:
   - script:
