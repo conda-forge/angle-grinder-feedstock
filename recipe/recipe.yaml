@@ -1,15 +1,12 @@
-schema_version: 1
-
 context:
-  name: angle-grinder
   version: 0.19.4
 
 package:
-  name: ${{ name|lower }}
+  name: angle-grinder
   version: ${{ version }}
 
 source:
-  url: https://github.com/rcoh/${{ name }}/archive/v${{ version }}.tar.gz
+  url: https://github.com/rcoh/angle-grinder/archive/v${{ version }}.tar.gz
   sha256: 13ae3912dcc34c2648d8ef57fe8d976cb978c70e6976ead079ea5d7609532172
 
 build:
@@ -34,10 +31,9 @@ about:
     - LICENSE
     - THIRDPARTY.yml
   summary: Slice and dice log files on the command-line
-  homepage: https://github.com/rcoh/${{ name }}
-  repository: https://github.com/rcoh/${{ name }}
+  homepage: https://github.com/rcoh/angle-grinder
+  repository: https://github.com/rcoh/angle-grinder
 
 extra:
   recipe-maintainers:
     - danielnachun
-
