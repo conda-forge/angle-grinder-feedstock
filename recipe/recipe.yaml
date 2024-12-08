@@ -1,0 +1,39 @@
+context:
+  version: 0.19.4
+
+package:
+  name: angle-grinder
+  version: ${{ version }}
+
+source:
+  url: https://github.com/rcoh/angle-grinder/archive/v${{ version }}.tar.gz
+  sha256: 13ae3912dcc34c2648d8ef57fe8d976cb978c70e6976ead079ea5d7609532172
+
+build:
+  number: 0
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - cargo-bundle-licenses
+    - make
+
+tests:
+  - script:
+      - agrind --help
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  summary: Slice and dice log files on the command-line
+  homepage: https://github.com/rcoh/angle-grinder
+  repository: https://github.com/rcoh/angle-grinder
+
+extra:
+  recipe-maintainers:
+    - danielnachun
