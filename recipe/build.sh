@@ -10,5 +10,4 @@ cargo-bundle-licenses \
     --output THIRDPARTY.yml
 
 # build statically linked binary with Rust
-export JEMALLOC_OVERRIDE=${PREFIX}/lib/libjemalloc${SHLIB_EXT}
 cargo install --bins --no-track --locked --root "${PREFIX}" --path .
